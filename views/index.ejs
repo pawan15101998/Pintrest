@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="main">
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid d-flex">
+    <span class="navbar-brand mb-0 h1">Pintrest</span>
+    <div class="left">
+      <span class="navbar-brand mb-0 h1">about</span>
+      <span class="navbar-brand mb-0 h1">Business</span>
+      <span class="navbar-brand mb-0 h1">Blog</span>
+      <a  href="#"><button type="button" class="btn btn-danger" id="loginbtn">Login</button></a>
+      <a href="#"><button type="button" class="btn btn-danger" id="registerbtn">SignIn</button></a>
+    </div>
+  </div>
+</nav>
+<div class="head">
+  <h1>Get Your next <br> <span>home decor idea</span></h1>
+</div>
+<div class="login">
+  <i class="ri-add-line"></i>
+  <div class="imagelogo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="">
+  </div>
+  <h1>Welcome back</h1>
+  <div class="circle"></div>
+  <form class="loginform" action="/login" method="post" >
+    <div class="mb-3">
+      <input placeholder="Username" name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="password" name="password" type="password" class="form-control" id="exampleInputPassword1">
+      <a href="#">Forgot your password?</a>
+    </div>
+    <button id="submitlogin"  type="submit" class="btn btn-danger">Submit</button>
+  </form>
+</div>
+<div class="register">
+  <i id="crossreg" class="ri-add-line"></i>
+  <div class="imagelogo">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="">
+  </div>
+  <h1>Welcome to Pintrest</h1>
+  <p>Find new idea to try</p>
+  <form class="registerform" action="/register" method="post" >
+    <div class="mb-3">
+      <input placeholder="name" name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="Username" name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="email" name="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <input placeholder="password" name="password" type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <button id="submitlogin"  type="submit" class="btn btn-danger">Submit</button>
+  </form>
+  <p id="aboutreg">By counting you agree with Pintrest <br> <span>terms and service</span> and acknowledge you are ready our <span>privacy policy</span></p>
+  <a id="haveacc" href="#">Already have account</a>
+</div>
+</div>
+<div class="pin_container">
+  <div class="card card_small"></div>
+  <div class="card card_medium">
+    <!-- <div class="box2">
+      <img src="https://source.unsplash.com/1600x900/?android" alt="">
+    </div> -->
+  </div>
+  <div class="card card_large"></div>
+  <div class="card card_small"></div>
+  <div class="card card_medium"></div>
+  <div class="card card_large"></div>
+  <div class="card card_small"></div>
+  <div class="card card_medium"></div>
+  <div class="card card_large"></div>
+  <div class="card card_small"></div>
+  <div class="card card_medium"></div>
+  <div class="card card_small"></div>
+  <div class="card card_medium"></div>
+  <div class="card card_medium"></div>
+  <div class="card card_large"></div>
+  <div class="card card_small"></div>
+  <div class="card card_medium"></div>
+  <div class="card card_small"></div>
+  <div class="card card_medium"></div>
+</div>
+</div>
+<!-- <script src="../javascripts/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+  <script>
+    var loginbtn = document.querySelector('#loginbtn')
+var registerbtn = document.querySelector('#registerbtn')
+var crosslogin = document.querySelector('.ri-add-line')
+var login = document.querySelector('.login')
+var register = document.querySelector('.register')
+var crossreg = document.querySelector('#crossreg')
+
+loginbtn.addEventListener('click', function(){
+login.style.display = "initial"
+})
+
+registerbtn.addEventListener('click', function(){
+    register.style.display = "initial"
+})
+
+crosslogin.addEventListener('click', function(){
+    login.style.display = "none"
+})
+
+crossreg.addEventListener('click', function(){
+ register.style.display = "none"
+})
+  </script>
+</html>

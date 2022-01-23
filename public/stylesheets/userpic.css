@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+.main2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mainpic{
+    height: 80%;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 40px;
+    display: flex;
+}
+
+.leftpic{
+    height: 100%;
+    width: 50%;
+    background-color: black;
+    border-radius: 40px;
+}
+
+.leftpic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+
+.rightdet{
+    height: 100%;
+    width: 60%;
+    padding: 10px;
+    /* background-color: blue; */
+}
+
+.lftdet i{
+font-size: 25px;
+margin-left: 20px;
+}
+
+.rftdet{
+align-items: center;    
+}
+
+.rftdet button{
+padding: 10px 20px;
+border-radius: 100px;
+margin-left: 20px;
+background-color: red;
+border: none;
+color: #fff;
+}
+
+.topdet{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rftdet{
+    display: flex;
+}
+
+.rightdet h1{
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.rightdet p{
+    margin-left: 40px;
+}
+
+.follow{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.follow h2{
+    font-size: 25px;
+}
+.follow button{
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: none;
+}
+.rightdet h2{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.rightdet small{
+    margin-left: 40px;
+}
+
+h3{
+    text-align: center;
+}
+
+.rightdet input[type=text]{
+    margin-left: 40px;
+    margin-top: 20px;
+    width: 60%;
+    height: 50px;
+    border-radius: 20px;
+}
+
+.rightdet input[type=submit]{
+    padding: 10px 10px;
+    border-radius: 100px;
+    margin-left: 350px;
+    border: none;
+    margin-top: 20px;
+}
+
+.cmt{
+    height: 40px;
+    width:300px;
+    border-radius: 40px;
+    margin-left: 40px;
+    /* background-color: red; */
+}
+
+.rftdet a{
+    text-decoration: none;
+    color: black;
+}
+

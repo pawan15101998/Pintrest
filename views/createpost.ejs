@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <div class="profileimg">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="">
+        </div>
+        <a href="">Home</a>
+        <a href="">Today</a>
+        <div class="input">
+          <input type="text" placeholder="Search">
+        </div>
+        <i class="ri-notification-line"></i>
+        <i class="ri-message-2-line"></i>
+        <div class="prof">
+          <h1>H</h1>
+        </div>
+        <i id="arrowlft" class="ri-arrow-down-s-line"></i>
+      </div>
+      <div class="post">
+          <div class="heading">
+              <a>Create a Pin</a>
+              <a>Save from website</a>
+          </div>
+          <div class="pinbox">
+            <div class="navpin">
+            <i class="ri-more-line"></i>
+            
+            </div>
+            <div class="pinimg">
+                <label for="file" class="dropimg">
+                    <i class="ri-upload-cloud-line"></i>
+                    <h4>Drag and drop or click to the</h4>
+                  </label>
+                     <form action="/upload" method="post" enctype="multipart/form-data">
+                       <input name="file" type="file" id="file" hidden onchange="getImagePreview(event)"> <br>
+                       <input id="tit" name="title" type="text" placeholder="Add your title"> <br>
+                       <input id="about" name="about" type="text" placeholder="tell every one what your pin is about"> <br>
+                       <button id="add">Add alt text</button>
+                       <input id="explain"  name="explain" type="text" placeholder="Explain what people can see in this pin"> <br>
+                       <input id="desc" name="desc" type="text" placeholder="Add a description link"> <br>
+                       <input id="submit" type="submit">
+                     </form>
+                <div class="pintext">
+                <div class="pinuser">
+                    <div class="pincircle"><h5>p</h5></div>
+                    <h4>pawan Kumar</h4>
+                </div>
+                </div>
+            </div>
+          </div>
+      </div>
+</body>
+<script>
+var add = document.querySelector('#add')
+var explain = document.querySelector('#explain')
+
+add.addEventListener('click', function(){
+    explain.style.display = "initial"
+    add.style.display = "none"
+})
+
+function getImagePreview(event){
+    var image = URL.createObjectURL(event.target.files[0]);
+    var imagediv = document.querySelector('.dropimg')
+    var divimg = document.createElement('img')
+    imagediv.innerHTML = ''
+    divimg.src = image;
+    imagediv.appendChild(divimg)
+    divimg.width = 300
+    divimg.height= 400
+    console.log(image)
+}
+</script>
+</html>
